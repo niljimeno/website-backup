@@ -1,0 +1,128 @@
+:root {
+    --bg-dark: #131313;
+    --bg: #282828;
+    --bg-base: #32302f;
+    --fg: #fbf1c7;
+    --link: #ffc107;
+    --border: #908a67;
+    --comment: #aaa;
+
+    scrollbar-color: var(--link) var(--bg-dark);
+}
+
+body {
+    margin: 0;
+    background-color: var(--bg);
+    color: var(--fg);
+    font-family: Hasklig;
+    line-height: 1.4;
+    font-size: 1.2em;
+    padding: 3em;
+}
+
+main {
+    margin: 0 auto;
+    padding: 2em 0em;
+    max-width: 800px;
+}
+
+
+main h1 {
+    text-align: center;
+}
+
+a {
+    color: var(--link);
+}
+
+pre a {
+    color: inherit;
+}
+
+a:not(:hover) {
+    text-decoration: none;
+}
+
+a.alt {
+    display: block;
+    text-decoration: none;
+    text-align: center;
+    padding: 0.2em;
+    border: 2px #0000 dashed;
+}
+
+a.alt h3 {
+    font-size: 1em;
+    color: var(--fg);
+    font-weight: normal;
+}
+
+a.alt:hover {
+    border-color: var(--border);
+}
+
+a.alt span {
+    color: var(--comment);
+}
+
+@font-face {
+    font-family: Hasklig;
+    src: url(Hasklig-Regular.ttf);
+}
+
+.about {
+    border: 1px var(--border) solid;
+    padding: 0em 2em;
+}
+
+pre:not(.nocode) {
+    margin: 1em 0;
+    padding: 0.8em;
+    margin-bottom: 2em;
+    border: 1px var(--border) solid;
+
+    overflow: scroll;
+}
+
+pre, code {
+    font-family: Hasklig !important;
+}
+
+div.ascii pre {
+    width: 5.4em;
+    margin: 0 auto;
+}
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 1.2em;
+}
+
+nav.center {
+    justify-content: center;
+}
+
+ul {
+    list-style: none;
+}
+
+div {
+    margin: 0;
+}
+
+div.index{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+div.index div {
+    display: inline-block;
+    margin-bottom: 1em;
+}
+
+td {
+    padding-right: 1em;
+}

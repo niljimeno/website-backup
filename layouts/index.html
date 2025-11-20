@@ -1,0 +1,65 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>{{ site.Title }}</title>
+        <meta name="viewport" content="width=device-width,initial-scale=0.8">
+        <link rel="stylesheet" href="/style.css">
+    </head>
+    <body>
+    <main class="index">
+        <h1 class="title">{{ .Title }}</h1>
+
+<div class="ascii">
+<pre class="nocode">
+    _
+   (\\
+    \||
+  __(_";
+ /    \
+{}___)\)_
+</pre>
+</div>
+
+        <div class="index">
+            <div>
+                <h3>~/Spaces</h3>
+                <ul>
+                <li><a style="display:block;" href="/blog">Blog</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3>~/Services</h3>
+                <ul>
+                <li><a style="display:block;" href="https://citadel.niliara.net">Citadel</a></li>
+                <li><a style="display:block;" href="https://git.niliara.net">Git</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <br/>
+        <div class="about">
+            {{- block "about" . }}{{- end }}
+        </div>
+
+        <br/>
+        <nav class="center">
+        <a href="https://man.9front.org/1/mothra"><img src="mothracompat.png"></img></a>
+        <a href="http://lantern6vrwheap4iahuktz3jtwvovrzhxgwgzvrvp46brdzzekxibqd.onion/"><img src="lantern-banner.webp"></img></a>
+        </nav>
+
+        </main>
+    </body>
+</html>
+
+
+{{ define "about" }}
+    <p>
+    {{ range ( where .Site.Pages "Title" "ne" "niliara.net" | first 1 ) }}
+        <span>Last change: <a href="{{ .Permalink }}">{{ .Date | time.Format ":date_long" }}</a></span><br/><br/>
+
+        <span>Ascii art by <a href="https://ascii.co.uk/art/rabbit">vwc</a></span><br/><br/>
+        <span>contact email: ojmjbsbAqspupo/nf</span><br/>
+        <a href="/index.xml">RSS</a>
+    {{end}}
+    </p>
+{{ end }}

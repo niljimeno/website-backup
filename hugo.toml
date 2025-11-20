@@ -1,0 +1,16 @@
+#baseURL = 'https://about-hugo.github.io/hugo-bare-bones'
+#baseURL = 'localhost:1313/hugo-bare-bones'
+baseURL = '/'
+languageCode = 'en-us'
+title = 'niliara.net'
+
+# disable useful things to see a clean site structure
+# for demo and learning
+disableKinds = ['taxonomy', 'term', 'sitemap']
+
+[Params]
+quote = 'In love with a fish'
+
+[Author]
+name = "nil"
+email = "ojmjbsbAqspupo/nf"

@@ -1,0 +1,29 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="/style.css">
+
+        <meta charset="UTF-8">
+        <title>{{ site.Title }}/blog</title>
+        <meta name="viewport" content="width=device-width,initial-scale=0.8">
+    </head>
+
+    <body>
+    <main>
+        <nav>
+            <a href="{{ site.BaseURL }}">&lt;&lt;HOME</a
+            ><a href="{{ site.BaseURL }}blog">&lt;blog</a
+            >
+        </nav>
+        <h1>{{ .Title}}</h1>
+    {{- block "main" . }}{{- end }}
+    </main>
+    </body>
+</html>
+
+
+{{ define "about" }}
+{{ end }}
+
+{{ define "main" }}
+    {{ .Content }}
+{{ end }}
