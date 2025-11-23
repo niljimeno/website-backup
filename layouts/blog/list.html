@@ -1,0 +1,10 @@
+{{ define "main" }}
+{{ .Content }}
+<div class="links">
+    <ul>
+    {{- range .Pages -}}
+        <li><a class="alt" href="{{ .Permalink }}"><h3 style="display: inline">{{ .Title }}</h3> <span>--{{ .Date | time.Format ":date_short" }}</span></a></li>
+    {{- end -}}
+    </ul>
+</div>
+{{ end }}

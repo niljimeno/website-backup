@@ -1,0 +1,10 @@
+{{ define "main" }}
+<hr>
+{{ .Content }}
+{{ end }}
+
+{{ define "about" }}
+<p>
+{{ .Date | time.Format ":date_long" }} -- <a href="/">Niliaranet</a>
+</p>
+{{ end }}

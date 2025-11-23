@@ -1,13 +1,9 @@
 :root {
-    --bg-dark: #131313;
-    --bg: #282828;
-    --bg-base: #32302f;
-    --fg: #fbf1c7;
-    --link: #ffc107;
-    --border: #908a67;
-    --comment: #aaa;
-
-    scrollbar-color: var(--link) var(--bg-dark);
+    --bg: #fdfbea;
+    --fg: #622f2c;
+    --link: #B55D39;
+    --comment: #888;
+    --border: #888;
 }
 
 body {
@@ -27,7 +23,7 @@ main {
 }
 
 
-main h1 {
+h1 {
     text-align: center;
 }
 
@@ -46,9 +42,7 @@ a:not(:hover) {
 a.alt {
     display: block;
     text-decoration: none;
-    text-align: center;
     padding: 0.2em;
-    border: 2px #0000 dashed;
 }
 
 a.alt h3 {
@@ -57,8 +51,9 @@ a.alt h3 {
     font-weight: normal;
 }
 
-a.alt:hover {
-    border-color: var(--border);
+a.alt:hover h3 {
+    color: var(--link);
+    text-decoration: underline;
 }
 
 a.alt span {
@@ -104,18 +99,12 @@ nav.center {
     justify-content: center;
 }
 
-ul {
-    list-style: none;
-}
-
 div {
     margin: 0;
 }
 
-div.index{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
+div.links {
+    border: 1px solid var(--fg);
 }
 
 div.index div {

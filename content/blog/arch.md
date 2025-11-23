@@ -4,17 +4,19 @@ date = 2025-06-22T23:02:50+02:00
 draft = false
 +++
 
-Installing Arch Linux is extremely simple with Archinstall,
-you really only need to run 3 commands during the installation:
+Burn the Arch Linux ISO into a floppy disk,
+then boot into it.
+
+Then run the folling commands:
 
 ```sh
-pacman -Sy # install core applications
-pacman -S archinstall # get the installation script
+pacman -Sy # install core applications o algo
+pacman -S archinstall
 archinstall
 ```
 
-Archinstall will then prompt available options,
-which can be easily followed without searching the net.
+Archinstall will then prompt you options.
+And that's really all it takes.
 
 - Without ethernet, you'll need to connect to wifi: [\[wiki\]](https://wiki.archlinux.org/title/Iwd#iwctl)
 [\[blog1\]](https://joshtronic.com/2021/11/21/connecting-to-wifi-with-iwd/)
