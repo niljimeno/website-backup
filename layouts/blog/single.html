@@ -1,6 +1,9 @@
 {{ define "main" }}
 <hr>
 {{ .Content }}
+<br/><br/>
+{{- block "about" . }}{{- end }}
+<br/>
 {{ end }}
 
 {{ define "about" }}

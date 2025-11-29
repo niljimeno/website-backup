@@ -58,6 +58,8 @@ a.alt:hover h3 {
 
 a.alt span {
     color: var(--comment);
+    float: right;
+    margin-right: 1.3em;
 }
 
 @font-face {
@@ -114,4 +116,12 @@ div.index div {
 
 td {
     padding-right: 1em;
+}
+
+li {
+    list-style: circle;
+}
+
+a.alt:hover li {
+    list-style: disc;
 }
