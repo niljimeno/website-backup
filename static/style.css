@@ -5,19 +5,27 @@
     --fg: #fbf1c7;
     --link: #ffc107;
     --border: #908a67;
-    --comment: #aaa;
+    --comment: #999;
+    --ascii-b: #444;
 
     scrollbar-color: var(--link) var(--bg-dark);
+    height: 100%;
+}
+
+.index {
+    align-content: center;
 }
 
 body {
     margin: 0;
     background-color: var(--bg);
     color: var(--fg);
-    font-family: Hasklig;
+    /* font-family: Hasklig; */
+    font-family: Iosevka;
     line-height: 1.4;
-    font-size: 1.2em;
+    font-size: 1.4em;
     padding: 1em;
+    margin-bottom: 8em;
 }
 
 main {
@@ -43,36 +51,60 @@ a:not(:hover) {
     text-decoration: none;
 }
 
+.links {
+    width: 800px;
+    margin: 0 auto;
+}
+
+.links ul {
+    list-style: none;
+    padding: 0em;
+}
+
+.links li {
+    display: flex;
+    justify-content: center;
+}
+
 a.alt {
-    display: block;
     text-decoration: none;
     text-align: center;
-    padding: 0.2em;
-    border: 2px #0000 dashed;
+
+    justify-content: space-between;
 }
 
 a.alt h3 {
     font-size: 1em;
     color: var(--fg);
     font-weight: normal;
+    text-align: left;
+    margin: 0;
 }
 
-a.alt:hover {
-    border-color: var(--border);
+a.alt:hover h3 {
+    color: var(--link);
+    text-decoration: underline;
+}
+
+a.alt:focus h3 {
+    color: var(--link);
 }
 
 a.alt span {
     color: var(--comment);
 }
 
-@font-face {
-    font-family: Hasklig;
-    src: url(Hasklig-Regular.ttf);
+span.ascii-border {
+    color: var(--ascii-b);
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
 }
 
 .about {
-    border: 1px var(--border) solid;
-    padding: 0em 2em;
+    border: 1px var(--border) dashed;
+    padding: 1em;
+    margin: 1em 0;
 }
 
 pre:not(.nocode) {
@@ -85,12 +117,24 @@ pre:not(.nocode) {
 }
 
 pre, code {
-    font-family: Hasklig !important;
+    font-family: Iosevka !important;
+}
+
+div.ascii {
+    width: 7em;
+    margin: 0 auto;
 }
 
 div.ascii pre {
     width: 5.4em;
     margin: 0 auto;
+}
+
+div.ascii a {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    margin-left:3.2em;
 }
 
 nav {
@@ -102,6 +146,10 @@ nav {
 
 nav.center {
     justify-content: center;
+}
+
+nav.center a {
+    align-content: center;
 }
 
 div {
@@ -121,4 +169,14 @@ div.index div {
 
 td {
     padding-right: 1em;
+}
+
+@font-face {
+    font-family: Hasklig;
+    src: url(Hasklig-Regular.ttf);
+}
+
+@font-face {
+    font-family: Iosevka;
+    src: url(Iosevka-Regular.ttf);
 }

@@ -4,5 +4,4 @@ run:
 up:
 	rm -rf public
 	hugo
-	scp -r public/* root@niliara.net:/var/www/niliaranet
-	# then chmod into it to make the folder executable (?)
+	tar czf - public | ssh root@niliara.net "cd /var/www/ && tar xvzf - && rm -rf niliaranet && mv public niliaranet"
