@@ -9,17 +9,18 @@
 
     <body>
     <main>
+        {{- block "nav" . }}
         <nav>
             <a href="{{ site.BaseURL }}">&lt;&lt;HOME</a
             ><a href="{{ site.BaseURL }}blog">&lt;blog</a
             >
         </nav>
+        {{- end }}
         <h1>{{ .Title}}</h1>
     {{- block "main" . }}{{- end }}
     </main>
     </body>
 </html>
-
 
 {{ define "about" }}
 {{ end }}

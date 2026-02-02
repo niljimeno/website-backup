@@ -1,0 +1,77 @@
+{{ define "nav"}}
+        <nav>
+            <a href="{{ site.BaseURL }}">&lt;&lt;HOME</a>
+        </nav>
+{{ end }}
+
+{{ define "main" }}
+
+<div class="presentation">
+<div class="ascii">
+<pre class="nocode">
+    _
+   (\\
+    \||
+  __(_";
+ /    \
+{}___)\)_
+</pre>
+</div>
+
+<div>
+<p>
+Hello! I'm Nil
+and I'm an aspirant to computer engineering.
+</p>
+
+<p>
+I use Linux/BSD on a daily.
+I do cloud/systems programming,
+server management
+and web development.
+</p>
+
+</div>
+</div>
+
+<hr></hr>
+
+<br/>
+
+
+
+<h3>Recent highlighted projects</h3>
+
+<div class="projects">
+<div>
+<a href="https://github.com/niljimeno/enforcer"><h4>Enforcer</h4></a>
+<p>
+Window manager for the X11 display server,
+written in C from scratch.
+</p>
+</div>
+<div>
+<a href="https://github.com/niljimeno/music-player-backend"><h4>Music player backend</h4></a>
+<p>
+Backend for a music player application
+that scraps songs,
+written in Clojure.
+</p>
+</div>
+<div>
+
+</div>
+
+{{ end }}
+
+
+{{ define "about" }}
+    <p>
+    {{ range ( where .Site.Pages "Title" "ne" "niliara.net" | first 1 ) }}
+        <span>Last change: <a href="{{ .Permalink }}">{{ .Date | time.Format ":date_long" }}</a></span><br/><br/>
+
+        <span>Ascii art by <a href="https://ascii.co.uk/art/rabbit">vwc</a></span><br/><br/>
+        <a href="/index.xml">RSS</a>
+    {{end}}
+    </p>
+{{ end }}

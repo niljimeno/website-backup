@@ -5,16 +5,16 @@
     <li><span class="ascii-border">{{ "#" | strings.Repeat 69 }}</span><br/></li>
 
     {{- range .Pages -}}
-    <li>
-        <span class="ascii-border">#</span
+    <li><nobr
+        ><span class="ascii-border">#</span
         ><a class="alt" href="{{ .Permalink }}"
-            ><span class="ascii-border">&emsp;&emsp;</span
+            ><span class="ascii-border">&nbsp;&nbsp;</span
             ><h3 style="display: inline">{{ .Title }}</h3
-            ><span class="ascii-border">{{ strings.Repeat (sub 70 (add (len .Title) 8 10)) "&emsp;" | safeHTML }}</span
+            ><span class="ascii-border">{{ strings.Repeat (sub 70 (add (len .Title) 8 10)) "&nbsp;" | safeHTML }}</span
             ><span>-- {{ .Date | time.Format "01/02/06" }}</span
-            ><span class="ascii-border">&emsp;&emsp;</span></a
-        ><span class="ascii-border">#</span>
-    </li>
+            ><span class="ascii-border">&nbsp;&nbsp;</span></a
+        ><span class="ascii-border">#</span></nobr
+    ></li>
     {{- end -}}
 
     <li><span class="ascii-border">{{ "#" | strings.Repeat 69 }}</span></li>
